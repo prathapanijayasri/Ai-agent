@@ -1,0 +1,8 @@
+[
+    {
+        "id": "TS001",
+        "question": "Calculate how many classes I need to attend to get 75%. I have attended 20 out of 40.",
+        "expected_tool": "attendance_calculator",
+        "data_type": "synthetic"
+    }
+]

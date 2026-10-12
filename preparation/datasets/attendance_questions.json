@@ -1,0 +1,11 @@
+[
+    {
+        "id": "ATT001",
+        "question": "What happens if my attendance is below 75%?",
+        "category": "attendance",
+        "expected_source": "Academic Regulations",
+        "expected_behavior": "Explain FAT debarment rules.",
+        "requires_tool": "rag_search",
+        "data_type": "synthetic"
+    }
+]

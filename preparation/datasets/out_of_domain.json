@@ -1,0 +1,17 @@
+[
+    {
+        "id": "ood_01",
+        "question": "Who won the cricket match yesterday?",
+        "expected_behavior": "Politely decline and state the assistant is for VIT-AP only."
+    },
+    {
+        "id": "ood_02",
+        "question": "Write a Python script for a snake game.",
+        "expected_behavior": "Politely decline."
+    },
+    {
+        "id": "ood_03",
+        "question": "What is the weather like in New York today?",
+        "expected_behavior": "Politely decline."
+    }
+]

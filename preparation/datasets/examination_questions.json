@@ -1,0 +1,11 @@
+[
+    {
+        "id": "EXA001",
+        "question": "What is the passing criteria for a CAT exam?",
+        "category": "examinations",
+        "expected_source": "Academic Regulations",
+        "expected_behavior": "Explain internal assessment passing rules.",
+        "requires_tool": "rag_search",
+        "data_type": "synthetic"
+    }
+]

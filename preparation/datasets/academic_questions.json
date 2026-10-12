@@ -1,0 +1,11 @@
+[
+    {
+        "id": "ACA001",
+        "question": "How many credits are required for a B.Tech CSE degree?",
+        "category": "academics",
+        "expected_source": "B.Tech Curriculum",
+        "expected_behavior": "State total credits required.",
+        "requires_tool": "rag_search",
+        "data_type": "synthetic"
+    }
+]

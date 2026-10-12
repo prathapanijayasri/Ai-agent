@@ -1,0 +1,21 @@
+[
+    {
+        "id": "CONV001",
+        "messages": [
+            {
+                "role": "user",
+                "content": "What is the placement eligibility?"
+            },
+            {
+                "role": "assistant",
+                "content": "Usually a CGPA of 7.0 with no backlogs."
+            },
+            {
+                "role": "user",
+                "content": "What if my CGPA is 7.8?"
+            }
+        ],
+        "expected_behavior": "Recognize the user meets the 7.0 criteria.",
+        "data_type": "synthetic"
+    }
+]

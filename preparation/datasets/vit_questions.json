@@ -1,0 +1,26 @@
+[
+    {
+        "id": "vit_q_01",
+        "category": "attendance",
+        "question": "What is the minimum attendance required to appear for FAT?",
+        "expected_answer_keywords": ["75%", "FAT", "minimum attendance"],
+        "synthetic": true,
+        "requires_tool": "rag_search"
+    },
+    {
+        "id": "vit_q_02",
+        "category": "placements",
+        "question": "What is the minimum CGPA for Super Dream companies?",
+        "expected_answer_keywords": ["8.0", "CGPA", "Super Dream"],
+        "synthetic": true,
+        "requires_tool": "rag_search"
+    },
+    {
+        "id": "vit_q_03",
+        "category": "faculty",
+        "question": "Who teaches Machine Learning?",
+        "expected_answer_keywords": ["Professor Name Placeholder"],
+        "synthetic": true,
+        "requires_tool": "rag_search"
+    }
+]

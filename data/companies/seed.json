@@ -1,0 +1,16 @@
+[
+    {
+        "company_id": "COMP001",
+        "company_name": "DemoTech Corp",
+        "minimum_cgpa": 7.0,
+        "maximum_backlogs": 0,
+        "eligible_programs": [
+            "B.Tech CSE",
+            "B.Tech ECE"
+        ],
+        "minimum_10th_percentage": 60,
+        "minimum_12th_percentage": 60,
+        "other_requirements": "None",
+        "source": "synthetic"
+    }
+]
