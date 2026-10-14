@@ -1,10 +1,9 @@
-# Byte-compiled / optimized / DLL files
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
-
-# C extensions
 *.so
+.Python
 
 # Distribution / packaging
 build/
@@ -19,7 +18,6 @@ parts/
 sdist/
 var/
 wheels/
-share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
@@ -29,11 +27,22 @@ venv/
 .venv/
 env/
 ENV/
+env.bak/
+venv.bak/
 
 # Environment variables & secrets
 .env
 .env.*
 !.env.example
+
+# Vector Database & Model Weights
+chroma_db/
+*.sqlite3
+models/
+hf_cache/
+*.bin
+*.pt
+*.safetensors
 
 # Testing & coverage
 .pytest_cache/
@@ -41,6 +50,11 @@ ENV/
 htmlcov/
 .tox/
 .nox/
+
+# Temporary uploads and scratch
+backend/uploads/*
+!backend/uploads/.gitkeep
+scratch/
 
 # IDE & Editor settings
 .vscode/

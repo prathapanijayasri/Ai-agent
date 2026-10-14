@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediBot AI — Healthcare Information Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-content">
+        <div class="brand">
+          <div class="brand-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20M2 12h20"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <h1>MediBot AI</h1>
+            <span class="brand-subtitle">Healthcare Information Assistant</span>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <button id="uploadModalBtn" class="btn btn-outline" title="Upload trusted healthcare documents">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="17 8 12 3 7 8"/>
+              <line x1="12" y1="3" x2="12" y2="15"/>
+            </svg>
+            <span>Add Documents</span>
+          </button>
+          <div class="status-badge" id="systemStatusBadge" title="System Status">
+            <span class="status-dot"></span>
+            <span id="systemStatusText">Online</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prominent Medical Disclaimer Banner -->
+      <div class="disclaimer-banner">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="12"/>
+          <line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+        <span>
+          <strong>Medical Notice:</strong> MediBot AI provides educational information only and cannot diagnose diseases or prescribe treatment. In life-threatening emergencies, call <strong>911 / 112</strong> immediately.
+        </span>
+      </div>
+    </header>
+
+    <!-- Main Chat Container -->
+    <main class="chat-container">
+      <!-- Chat Messages Scroll Area -->
+      <div class="chat-messages" id="chatMessages">
+        <!-- Initial Welcome Message -->
+        <div class="message bot-message">
+          <div class="message-avatar">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20M2 12h20"/>
+            </svg>
+          </div>
+          <div class="message-body">
+            <div class="message-header">
+              <span class="sender-name">MediBot AI</span>
+              <span class="message-time">Just now</span>
+            </div>
+            <div class="message-content">
+              <p>Hello! I am your <strong>Healthcare Information Assistant</strong>. I can answer educational questions on:</p>
+              <ul>
+                <li>Common diseases and evidence-based prevention</li>
+                <li>General symptoms, red flags, and possible causes</li>
+                <li>Nutrition, daily hydration, sleep hygiene, and physical exercise</li>
+                <li>Basic first aid protocols (burns, sprains, minor cuts, nosebleeds)</li>
+                <li>General medication safety and antibiotic precautions</li>
+              </ul>
+              <p>How may I assist your health awareness today?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Example Prompts Strip -->
+      <div class="example-questions-wrapper">
+        <span class="example-label">Try asking:</span>
+        <div class="example-questions" id="exampleQuestions">
+          <button class="example-chip" data-prompt="What are the symptoms and prevention tips for Type 2 Diabetes?">Type 2 Diabetes</button>
+          <button class="example-chip" data-prompt="What is the recommended daily water intake and signs of dehydration?">Daily Hydration</button>
+          <button class="example-chip" data-prompt="What basic first aid should be done for a minor burn?">Minor Burns First Aid</button>
+          <button class="example-chip" data-prompt="How can I improve my sleep hygiene for better rest?">Sleep Hygiene</button>
+          <button class="example-chip" data-prompt="Why is it critical to finish a full course of prescribed antibiotics?">Antibiotic Precautions</button>
+        </div>
+      </div>
+
+      <!-- Chat Input Area -->
+      <div class="chat-input-container">
+        <!-- Loading Indicator -->
+        <div class="loading-indicator" id="loadingIndicator">
+          <div class="spinner"></div>
+          <span>MediBot is consulting verified healthcare knowledge...</span>
+        </div>
+
+        <form class="chat-input-form" id="chatForm">
+          <textarea
+            id="messageInput"
+            class="chat-textarea"
+            placeholder="Type your healthcare question here... (Press Enter to send, Shift+Enter for newline)"
+            rows="1"
+            maxlength="2000"
+            required
+          ></textarea>
+          <button type="submit" id="sendBtn" class="btn btn-primary" title="Send message">
+            <span>Send</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"/>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+          </button>
+        </form>
+        <div class="input-footer">
+          <span>Press <strong>Enter</strong> to send &bull; Maximum 2000 characters</span>
+          <span id="charCounter">0 / 2000</span>
+        </div>
+      </div>
+    </main>
+
+    <!-- Document Upload Modal -->
+    <div class="modal-overlay" id="uploadModal">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3>Ingest Healthcare Document</h3>
+          <button class="modal-close" id="closeModalBtn">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p class="modal-description">
+            Upload trusted educational documents (WHO, NHS, MedlinePlus) in <strong>.pdf</strong> or <strong>.txt</strong> format.
+            Documents will be split into chunks, embedded with Sentence Transformers, and indexed into ChromaDB.
+          </p>
+          <form id="uploadForm" class="upload-form">
+            <div class="form-group">
+              <label for="adminKeyInput">Admin API Key <em>(optional, if configured)</em></label>
+              <input type="password" id="adminKeyInput" placeholder="Enter X-Admin-Key if required">
+            </div>
+            <div class="file-drop-area" id="fileDropArea">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="12" y1="18" x2="12" y2="12"/>
+                <line x1="9" y1="15" x2="15" y2="15"/>
+              </svg>
+              <p>Click or drag a <strong>.PDF</strong> or <strong>.TXT</strong> file here</p>
+              <span class="file-size-hint">Maximum upload size: 10MB</span>
+              <input type="file" id="fileInput" accept=".pdf,.txt" required>
+            </div>
+            <div id="selectedFileName" class="selected-file-name"></div>
+            <div class="upload-actions">
+              <button type="button" class="btn btn-secondary" id="cancelUploadBtn">Cancel</button>
+              <button type="submit" class="btn btn-primary" id="startUploadBtn">
+                <span>Upload & Ingest</span>
+              </button>
+            </div>
+          </form>
+          <div id="uploadFeedback" class="upload-feedback"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
