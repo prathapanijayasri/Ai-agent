@@ -1,0 +1,30 @@
+# MedlinePlus and FDA Guide: Medication Safety, Precautions, and Stewardship
+Source: MedlinePlus & U.S. Food and Drug Administration (FDA) Consumer Health
+Topic: Safe Medication Use and Precautions
+
+## 1. General Principles of Safe Medication Use
+Medicines treat illness, alleviate symptoms, and save lives, but must be handled with care:
+- Follow Instructions Exactly: Take medicines strictly as directed on the prescription or packaging label (correct dose, timing, and relationship with meals).
+- Never Alter Dosages Independently: Never increase, double, decrease, or prematurely stop prescribed medications without explicit consultation with your prescribing doctor or pharmacist.
+- Avoid Sharing: Never share prescription medicines with friends or family. Medications are tailored to individual health history, body weight, kidney/liver function, and existing drug interactions.
+- Storage: Keep medications in original labeled containers in a cool, dry place out of reach and sight of children and pets. Do not store in warm, humid bathrooms unless specified.
+- Keep an Active List: Maintain an accurate list of all prescription drugs, over-the-counter products, herbal supplements, and vitamins to review with healthcare providers.
+
+## 2. Antibiotic Stewardship and Guidelines
+Antibiotics are critical medicines used exclusively to treat bacterial infections.
+Key Safety Rules:
+- Ineffective for Viruses: Antibiotics do NOT treat viral illnesses such as the common cold, flu, COVID-19, bronchitis, or most sore throats.
+- Complete the Full Prescribed Course: Even if symptoms improve and you feel completely recovered, complete the course exactly as instructed unless directed otherwise by your physician. Stopping early encourages antibiotic-resistant bacteria to survive and multiply.
+- Never Keep Leftover Antibiotics: Discard expired or leftover doses safely at authorized pharmacy drop-off points. Never take leftover antibiotics for a new illness.
+
+## 3. Over-The-Counter (OTC) Analgesics Precautions
+Common pain relievers and antipyretics carry important safety warnings:
+- Paracetamol / Acetaminophen:
+  * Widely used for mild pain and fever reduction.
+  * Maximum Daily Limit: Do not exceed 4,000 mg (4 grams) in 24 hours for healthy adults; lower thresholds (2,000 to 3,000 mg) apply for older adults, liver disease patients, or regular alcohol consumers.
+  * Danger: Acetaminophen is an active ingredient in hundreds of combination cough, cold, and sleep medicines. Inadvertently combining them risks severe, potentially fatal acute liver damage.
+- Nonsteroidal Anti-Inflammatory Drugs (NSAIDs - Ibuprofen, Naproxen, Aspirin):
+  * Useful for pain and inflammation reduction.
+  * Take with food or milk to minimize gastrointestinal discomfort.
+  * Precautions: NSAIDs can aggravate stomach ulcers, impair kidney function, elevate blood pressure, and increase bleeding risks. People with cardiovascular disease, renal impairment, gastrointestinal bleeding history, or during third-trimester pregnancy must consult a physician prior to use.
+  * Pediatric Alert: Never give aspirin or aspirin-containing products to children or teenagers recovering from viral infections due to the danger of Reye's syndrome.

@@ -1,0 +1,43 @@
+# NHS and MedlinePlus Guide: General Symptoms, Causes, and When to Seek Care
+Source: National Health Service (NHS) & MedlinePlus Patient Information
+Topic: Symptom Awareness and Triage
+
+## 1. Fever in Adults
+A normal body temperature is approximately 37°C (98.6°F). A fever is generally defined as a body temperature of 38°C (100.4°F) or above.
+Possible Causes:
+- Viral infections (flu, rhinovirus, COVID-19, gastrointestinal bugs)
+- Bacterial infections (urinary tract infections, strep throat, pneumonia)
+- Inflammatory conditions or vaccine immune responses
+Self-Care Advice:
+- Stay well hydrated by drinking clear fluids, oral rehydration solutions, or broths.
+- Rest adequately and wear lightweight clothing.
+- Over-the-counter antipyretics (e.g., paracetamol/acetaminophen or ibuprofen) can alleviate discomfort if medically appropriate.
+When to Seek Urgent Medical Care:
+- A fever exceeding 39.4°C (103°F) in adults, or lasting more than 3 consecutive days.
+- Fever accompanied by a stiff neck, confusion, unexplained rash, or severe difficulty breathing.
+
+## 2. Headaches: Tension, Migraine, and Red Flags
+Headaches are common and vary in etiology and severity.
+- Tension Headaches: The most common type; presents as a dull, steady ache or pressure band around the forehead or back of the head. Often triggered by stress, dehydration, poor posture, or lack of sleep.
+- Migraines: Moderate to severe throbbing pain, often unilateral, frequently accompanied by sensitivity to light (photophobia), sound, and nausea.
+Emergency Warning Signs ("Thunderclap" or Red Flag Headaches):
+- A sudden, excruciating headache reaching maximum intensity within seconds or minutes.
+- Headache following a recent head injury.
+- Headache accompanied by neurological signs: facial drooping, arm weakness, slurred speech, confusion, or visual loss. These require immediate emergency hospital triage (call 911 or 112).
+
+## 3. Persistent Fatigue and Low Energy
+Fatigue is an extreme, persistent feeling of tiredness or exhaustion not relieved by sleep.
+Common Non-Urgent Causes:
+- Inadequate or irregular sleep patterns (sleep deprivation, sleep apnea)
+- Poor nutritional intake, iron deficiency anemia, or vitamin D deficiency
+- Chronic emotional stress, anxiety, or depression
+- Sedentary lifestyle or dehydration
+Evaluation:
+- If unexplained fatigue persists for more than 2 to 4 weeks despite adequate sleep, a doctor should be consulted for comprehensive blood tests (thyroid panel, CBC, ferritin, metabolic screen).
+
+## 4. Cough: Acute vs. Persistent
+- Acute Cough (lasting less than 3 weeks): Frequently caused by viral upper respiratory tract infections, post-nasal drip, or acute bronchitis.
+- Chronic Cough (lasting 8 weeks or longer in adults): Common causes include asthma, gastroesophageal reflux disease (GERD), chronic obstructive pulmonary disease (COPD), environmental allergies, or medication side effects (such as ACE inhibitors).
+Urgent Warning Signs:
+- Coughing up blood (hemoptysis).
+- Shortness of breath, audible wheezing, or persistent chest pain.
