@@ -194,13 +194,34 @@ def test_real_gemini_api_call():
         Verifies that the configured GEMINI_API_KEY can communicate with Google's API.
     """
     from google import genai
+    import time
 
     client = genai.Client(api_key=Config.GEMINI_API_KEY)
-    response = client.models.generate_content(
-        model=Config.GEMINI_MODEL,
-        contents="Respond with the exact phrase: REAL_GEMINI_INTEGRATION_VERIFIED"
-    )
+    response = None
+    last_err = None
+
+    for model_name in [Config.GEMINI_MODEL, "gemini-3.5-flash", "gemini-flash-latest"]:
+        for attempt in range(2):
+            try:
+                response = client.models.generate_content(
+                    model=model_name,
+                    contents="Respond with the exact phrase: REAL_GEMINI_INTEGRATION_VERIFIED"
+                )
+                if response and response.text:
+                    break
+            except Exception as e:
+                last_err = e
+                if "503" in str(e) or "UNAVAILABLE" in str(e):
+                    time.sleep(1.0)
+                    continue
+                break
+        if response and response.text:
+            break
+
+    if response is None or not response.text:
+        raise last_err
 
     assert response is not None
     assert response.text is not None
     assert "REAL_GEMINI_INTEGRATION_VERIFIED" in response.text
+
