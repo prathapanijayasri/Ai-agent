@@ -41,3 +41,21 @@ Evaluation:
 Urgent Warning Signs:
 - Coughing up blood (hemoptysis).
 - Shortness of breath, audible wheezing, or persistent chest pain.
+
+## 5. Hand, Wrist, and Arm Pain: Causes, Ergonomics, and Triage
+Hand and arm discomfort can arise from muscles, tendons, ligaments, joints, or peripheral nerves.
+Common Non-Emergency Causes:
+- Repetitive Strain Injury (RSI) and Overuse: Prolonged computer typing, mouse use, manual assembly work, or repetitive gripping leading to wrist or hand tendon irritation, stiffness, and mild ache.
+- Sprains and Strains: Overstretching wrist or finger ligaments or hand muscles during physical work, exercise, or minor awkward movements.
+- Carpal Tunnel Syndrome: Compression of the median nerve within the carpal tunnel of the wrist. Symptoms include tingling, numbness, burning, or aching pain in the thumb, index, middle fingers, and palm, frequently worsening at night or after repetitive hand movements.
+- Tendonitis / Tenosynovitis (e.g., De Quervain's): Pain and tenderness along the wrist and base of the thumb aggravated by pinching or gripping.
+- Arthritis: Joint stiffness, swelling, or dull aching in the knuckles, fingers, or wrist, characteristically more pronounced upon waking in the morning.
+Self-Care and First-Line Management:
+- Ergonomics and Rest: Take scheduled micro-breaks from typing or repetitive tasks every 30 to 60 minutes. Use ergonomic keyboard and wrist rests, and avoid forceful sustained gripping.
+- Temperature Therapy: Apply a cool pack wrapped in a cloth for 15 to 20 minutes to reduce acute swelling or inflammation; use gentle warmth for chronic muscle stiffness.
+- Gentle Range-of-Motion Exercises: Perform gentle wrist rotations and finger extensions without forcing movement past the threshold of pain.
+- Temporary Splinting: A neutral wrist splint worn during sleep or repetitive activities can alleviate nerve compression in early carpal tunnel symptoms.
+When to Seek Medical Evaluation:
+- Pain or numbness that persists for more than a few days, worsens over time, or interferes with sleep and daily activities.
+- Inability to grip objects, significant loss of hand strength, or visible joint swelling, redness, and warmth.
+- Critical Red Flag: Any left arm or hand pain that is accompanied by chest tightness, pressure, or pain, shortness of breath, cold sweating, nausea, lightheadedness, or sudden onset requires immediate emergency evaluation (call 112 or local emergency services).

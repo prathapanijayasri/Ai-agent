@@ -25,10 +25,39 @@ class VectorStore:
             model_name=self.model_name
         )
 
-        self.collection = self.client.get_or_create_collection(
+        # Ensure collection uses cosine similarity
+        try:
+            self.collection = self.client.get_collection(
+                name="medibot_knowledge",
+                embedding_function=self.embedding_fn
+            )
+            # Check if collection metadata has cosine space; if not, recreate
+            meta = self.collection.metadata or {}
+            if meta.get("hnsw:space") != "cosine":
+                logger.info("Migrating collection space to cosine...")
+                self.client.delete_collection("medibot_knowledge")
+                self.collection = self.client.create_collection(
+                    name="medibot_knowledge",
+                    embedding_function=self.embedding_fn,
+                    metadata={"hnsw:space": "cosine", "description": "MediBot AI Verified Healthcare Knowledge Base"}
+                )
+        except Exception:
+            self.collection = self.client.create_collection(
+                name="medibot_knowledge",
+                embedding_function=self.embedding_fn,
+                metadata={"hnsw:space": "cosine", "description": "MediBot AI Verified Healthcare Knowledge Base"}
+            )
+
+    def reset_collection(self) -> None:
+        """Deletes and recreates the collection with cosine distance metric."""
+        try:
+            self.client.delete_collection("medibot_knowledge")
+        except Exception:
+            pass
+        self.collection = self.client.create_collection(
             name="medibot_knowledge",
             embedding_function=self.embedding_fn,
-            metadata={"description": "MediBot AI Verified Healthcare Knowledge Base"}
+            metadata={"hnsw:space": "cosine", "description": "MediBot AI Verified Healthcare Knowledge Base"}
         )
 
     def count(self) -> int:
@@ -78,10 +107,14 @@ class VectorStore:
 
         return formatted_results
 
-    def seed_from_directory(self, knowledge_base_dir: Path) -> int:
+    def seed_from_directory(self, knowledge_base_dir: Path, force_reindex: bool = False) -> int:
         """
-        Scans directory for .txt and .pdf files and indexes them if collection is empty or files are missing.
+        Scans directory for .txt and .pdf files and indexes them.
+        If force_reindex is True, clears existing collection and re-indexes all files.
         """
+        if force_reindex:
+            self.reset_collection()
+
         kb_path = Path(knowledge_base_dir)
         if not kb_path.exists():
             logger.warning(f"Knowledge base directory {kb_path} does not exist.")
